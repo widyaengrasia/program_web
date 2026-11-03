@@ -1,5 +1,5 @@
-﻿# program-web-2
-Project program_web_2 yang dibuat sebagai bagian dari pembelajaran pengembangan web.
+﻿# program_web
+Project program_web yang dibuat sebagai bagian dari pembelajaran pengembangan web.
 
 ## 📌 Tentang Project
 
