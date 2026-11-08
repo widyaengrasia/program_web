@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Peserta Workshop - Festival Kreativitas Mahasiswa 2026</title>
+  <meta name="description"
+    content="Formulir Pendaftaran Peserta Workshop dan Seminar Festival Kreativitas Mahasiswa 2026 Universitas Pamulang Kampus Serang.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Bar Identitas Kampus -->
+  <div class="institution-bar">
+    <div class="container">
+      <div>
+        <strong>YAYASAN SASMITA JAYA</strong> &bull; UNIVERSITAS PAMULANG KAMPUS SERANG &bull; SISTEM INFORMASI S-1
+      </div>
+      <div>
+        <span class="badge">UTS PEMROGRAMAN WEB 1 &bull; PAKET F (NIM GENAP)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigasi -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <img src="assets/Logo unpam.png" alt="Logo Universitas Pamulang" width="46" height="46">
+        <div class="brand-text">
+          <h1>Festival Kreativitas 2026</h1>
+          <span>Seminar & Expo Teknologi Informasi</span>
+        </div>
+      </div>
+
+      <!-- Navigasi 5 Menu Utama Sesuai Soal Paket Genap -->
+      <nav class="main-nav" aria-label="Navigasi Utama">
+        <button class="nav-toggle" id="navToggle" aria-label="Buka Menu">Menu</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="halaman2.html" class="nav-link">Juri</a></li>
+          <li><a href="halaman3.html" class="nav-link">Jadwal</a></li>
+          <li><a href="halaman4.html" class="nav-link">Dokumentasi</a></li>
+          <li><a href="halaman5.html" class="nav-link active">Registrasi</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Konten Utama -->
+  <main>
+    <div class="container">
+
+      <!-- Judul Halaman -->
+      <section class="page-title-section">
+        <h2>Registrasi Peserta Workshop & Seminar</h2>
+        <p>Lengkapi formulir registrasi berikut untuk mengamankan kursi Anda pada sesi workshop dan expo Festival
+          Kreativitas Mahasiswa 2026.</p>
+      </section>
+
+      <!-- Form Registrasi Sesuai Ketentuan Soal UTS -->
+      <section class="form-container">
+        <div class="form-header-bar">
+          <h3>Formulir Pendaftaran Peserta Workshop</h3>
+          <p>Pastikan identitas mahasiswa valid untuk penerbitan e-certificate ber-SKPI</p>
+        </div>
+
+        <div class="form-body">
+          <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+
+            <!-- Baris 1: Nama Lengkap & NIM -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="namaLengkap" class="form-label">Nama Lengkap <span class="req">*</span></label>
+                <input type="text" id="namaLengkap" name="namaLengkap" class="form-control"
+                  placeholder="Contoh: Dimas Aditya Pratama" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nim" class="form-label">NIM (Nomor Induk Mahasiswa) <span class="req">*</span></label>
+                <input type="text" id="nim" name="nim" class="form-control" placeholder="Contoh: 221011400246"
+                  pattern="[0-9]+" title="Hanya angka diperbolehkan" required>
+              </div>
+            </div>
+
+            <!-- Baris 2: Email & Jenis Kelamin -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Alamat Email Aktif <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="nama@student.unpam.ac.id"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Jenis Kelamin <span class="req">*</span></label>
+                <div class="radio-group-wrapper">
+                  <label class="radio-card">
+                    <input type="radio" name="jenisKelamin" value="Laki-laki" required>
+                    <span>Laki-laki</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="jenisKelamin" value="Perempuan">
+                    <span>Perempuan</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Baris 3: Pilihan Sesi & Status Peserta -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pilihanSesi" class="form-label">Pilihan Sesi <span class="req">*</span></label>
+                <select id="pilihanSesi" name="pilihanSesi" class="form-control" required>
+                  <option value="" disabled selected>-- Pilih Sesi Kegiatan --</option>
+                  <option value="Sesi 1: Pembukaan Festival & Keynote Speech">Sesi 1: Pembukaan Festival & Keynote
+                    Speech</option>
+                  <option value="Sesi 2: Presentasi Inovasi Digital (Pitching Finalis)">Sesi 2: Presentasi Inovasi
+                    Digital (Pitching Finalis)</option>
+                  <option value="Sesi 3: Pameran Karya Mahasiswa & Demo Stand">Sesi 3: Pameran Karya Mahasiswa & Demo
+                    Stand</option>
+                  <option value="Sesi 4: Pengumuman Pemenang & Awarding Night">Sesi 4: Pengumuman Pemenang & Awarding
+                    Night</option>
+                  <option value="Full Day All Sessions (Semua Sesi)">Full Access (Mengikuti Seluruh Sesi)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="statusPeserta" class="form-label">Status Peserta <span class="req">*</span></label>
+                <select id="statusPeserta" name="statusPeserta" class="form-control" required>
+                  <option value="" disabled selected>-- Pilih Status Kepesertaan --</option>
+                  <option value="Mahasiswa Aktif UNPAM (Internal)">Mahasiswa Aktif UNPAM (Internal)</option>
+                  <option value="Mahasiswa Eksternal (Perguruan Tinggi Lain)">Mahasiswa Eksternal (Perguruan Tinggi
+                    Lain)</option>
+                  <option value="Delegasi Ormawa / Himpunan Mahasiswa">Delegasi Ormawa / Himpunan Mahasiswa</option>
+                  <option value="Peserta Kompetisi Inovasi">Peserta Kompetisi Inovasi</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Baris 4: Pengalaman atau Minat Bisnis Digital -->
+            <div class="form-group">
+              <label for="pengalamanMinat" class="form-label">Pengalaman atau Minat Bisnis Digital <span
+                  class="req">*</span></label>
+              <textarea id="pengalamanMinat" name="pengalamanMinat" class="form-control" rows="4"
+                placeholder="Ceritakan ide inovasi, bidang teknologi yang Anda minati (Web, Mobile, AI, IoT), atau pengalaman proyek digital yang pernah dibuat..."
+                required></textarea>
+            </div>
+
+            <!-- Tombol Aksi Form Sesuai Soal -->
+            <div class="form-actions">
+              <button type="reset" class="btn btn-secondary">Bersihkan Form</button>
+              <button type="submit" class="btn btn-primary" id="btnRegistrasi">
+                <span>Registrasi Peserta Sekarang</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modal Konfirmasi Berhasil Registrasi -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <div class="modal-icon" style="font-size: 1.5rem; font-weight: 800;">OK</div>
+      <h3>Registrasi Workshop Berhasil!</h3>
+      <p>Pendaftaran Anda untuk Festival Kreativitas Mahasiswa 2026 telah berhasil kami konfirmasi.</p>
+
+      <div class="modal-recap" id="modalRecap">
+        <!-- Rincian Data Formulir akan dimasukkan secara dinamis melalui JavaScript -->
+      </div>
+
+      <button type="button" class="btn btn-primary" style="width: 100%;" onclick="closeModal()">Tutup & Selesai</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <h4>Festival Kreativitas Mahasiswa 2026</h4>
+          <p>
+            Pusat Inovasi dan Kreativitas Mahasiswa bersama Program Studi Sistem Informasi S-1,
+            Universitas Pamulang Kampus Serang.
+          </p>
+          <p>
+            <strong>Lokasi:</strong> Jl. Raya Serang-Jakarta, Kalodran, Walantaka, Serang, Banten<br>
+            <strong>Kontak Panitia:</strong> 0821 2422 5399
+          </p>
+        </div>
+
+        <div class="footer-col footer-links">
+          <h4>Navigasi Halaman</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="halaman2.html">Profil Dewan Juri</a></li>
+            <li><a href="halaman3.html">Jadwal Acara Festival</a></li>
+            <li><a href="halaman4.html">Dokumentasi Workshop</a></li>
+            <li><a href="halaman5.html">Registrasi Peserta</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ketentuan Formulir</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6;">
+            Form memuat seluruh isian wajib:<br>
+            &bull; Nama Lengkap &bull; NIM<br>
+            &bull; Email &bull; Jenis Kelamin<br>
+            &bull; Pilihan Sesi &bull; Status Peserta<br>
+            &bull; Pengalaman/Minat Bisnis Digital<br>
+            &bull; Tombol Registrasi
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Universitas Pamulang Kampus Serang - Program Studi Sistem Informasi. All Rights Reserved.</div>
+        <div>Ujian Tengah Semester (UTS) Pemrograman Web 1</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const nama = document.getElementById('namaLengkap').value;
+      const nim = document.getElementById('nim').value;
+      const email = document.getElementById('email').value;
+      const jk = document.querySelector('input[name="jenisKelamin"]:checked')?.value || '-';
+      const sesi = document.getElementById('pilihanSesi').value;
+      const status = document.getElementById('statusPeserta').value;
+      const pengalaman = document.getElementById('pengalamanMinat').value;
+
+      const modalRecap = document.getElementById('modalRecap');
+      modalRecap.innerHTML = `
+        <div class="modal-recap-item"><span class="k">Nama Lengkap:</span><span class="v">${nama}</span></div>
+        <div class="modal-recap-item"><span class="k">NIM:</span><span class="v">${nim}</span></div>
+        <div class="modal-recap-item"><span class="k">Email:</span><span class="v">${email}</span></div>
+        <div class="modal-recap-item"><span class="k">Jenis Kelamin:</span><span class="v">${jk}</span></div>
+        <div class="modal-recap-item"><span class="k">Pilihan Sesi:</span><span class="v">${sesi}</span></div>
+        <div class="modal-recap-item"><span class="k">Status Peserta:</span><span class="v">${status}</span></div>
+        <div class="modal-recap-item" style="flex-direction: column; gap: 4px; margin-top: 6px;"><span class="k">Minat/Pengalaman:</span><span class="v" style="font-weight: normal; font-style: italic;">"${pengalaman}"</span></div>
+      `;
+
+      document.getElementById('successModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('active');
+      document.getElementById('registrationForm').reset();
+    }
+  </script>
+</body>
+
+</html>
